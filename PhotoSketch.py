@@ -13,6 +13,7 @@ img_smooth = cv2.bilateralFilter(img_grey_invert,9,100,100)
 cv2.imshow("Smoothed",img_smooth)
 cv2.waitKey(0)
 
+def dodgev2(x,y):
     return cv2.divide(x,255-y,scale=256)
 
 final_img = dodgev2(img_grey,img_smooth)
