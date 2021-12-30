@@ -1,8 +1,7 @@
 import cv2
-import numpy as np
-import matplotlib.pyplot as plt
 
-img = cv2.imread("Resources/Shivani.JPG")
+
+img = cv2.imread("Resources/forest.jpeg")
 cv2.imshow('Original', img)
 cv2.waitKey(0)
 
@@ -14,7 +13,7 @@ img_blur = cv2.blur(img, (3,3),0)
 cv2.imshow('Blur Image', img_blur)
 cv2.waitKey(0)
 
-edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection
+edges = cv2.Canny(image=img, threshold1=100, threshold2=200) # Canny Edge Detection
 cv2.imshow('Canny Edge Detection', edges)
 cv2.waitKey(0)
 
